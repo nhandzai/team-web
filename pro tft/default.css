@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', 'Arial', sans-serif;
 }
 
 body {
@@ -7,7 +8,9 @@ body {
     background-color:#ddd;
     display: flex;
     flex-direction: column;
-    
+    background-image: url(./images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header {
