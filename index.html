@@ -38,8 +38,8 @@
                     </li>
                 </ul>
 
-                <img class="card_img" src="./images/pic-1.jpg" alt="###" usemap="#workmap" width="px">
-                <map name="workmap">
+                <img class="card_img" id="mainImage" src="./images/pic-1.jpg" alt="###" usemap="#workmap">
+                <map name="workmap" id="workmap">
                     <area shape="rect" coords="142,1067,471,112" alt="22127172" href="./members/22127172/22127172.html">
                     <area shape="rect" coords="475,1068,829,141" alt="22127303" href="./members/22127303/22127303.html">
                 </map>
@@ -54,6 +54,24 @@
         </div>
     </div>
 
+    <script>
+        function resizeMap() {
+            let img = document.getElementById('mainImage');
+            let map = document.getElementById('workmap');
+            let wRatio = img.clientWidth / 1000;
+            let hRatio = img.clientHeight / 1200;
+    
+            Array.from(map.getElementsByTagName('area')).forEach(area => {
+                let coords = area.getAttribute('coords').split(',').map(Number);
+                let newCoords = coords.map((coord, i) => i % 2 === 0 ? coord * wRatio : coord * hRatio);
+                area.setAttribute('coords', newCoords.join(','));
+            });
+        }
+    
+        window.addEventListener('resize', resizeMap);
+        window.addEventListener('load', resizeMap);
+    </script>
+    
 </body>
 
 </html>
