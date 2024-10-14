@@ -76,6 +76,22 @@ body {
 }
 #right_title{
     text-align: center;
+}
+.img-holder {
+    position: relative;
+    width: fit-content; 
+}
 
-    
+.map{    
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    width: 13%; 
+    height: 13%; 
+    z-index: 10;
+    top: 13%;
+    left: 28%;
+}
+.map.b{
+    left: 55%;
+    top: 15%
 }
