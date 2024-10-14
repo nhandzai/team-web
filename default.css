@@ -63,6 +63,15 @@ body {
     border-radius: 20px;
     color: black;
 }
+.card_main{
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    color: black;
+    width: 1020.75px;
+    height: 100%;
+}
 
 .card_img {
     max-width: 100%;
@@ -70,7 +79,12 @@ body {
     border-radius: 20px;
    
 }
-
+.card_img_main
+{
+    max-width: 980.75px;
+    height: auto;
+    border-radius: 20px;
+}
 .h2 {
     font-size: 50px;
 }
